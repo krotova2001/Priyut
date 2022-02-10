@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<li> Количество животных, которые ищут дом - {{ count_animals }} </li>
+<br>
+{% for AnimalOne in animals %}
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+<div class="card" style="width: 18rem;">
+  <img src="{{AnimalOne.cover}}" class="card-img-top" alt="Проблема">
+  <div class="card-body">
+    <h5 class="card-title">{{AnimalOne.nickname}}</h5>
+    <p class="card-text">{{AnimalOne.description}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{AnimalOne.age}}</li>
+    <li class="list-group-item">{{AnimalOne.comment}}</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">{{ AnimalOne. }}</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+</div>
+  <div class="col">
+
+{% endfor %}
+{% endblock content %}
